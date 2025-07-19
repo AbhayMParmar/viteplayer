@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "poppins", "sans-serif";
+    @apply bg-black;
+}
+
+.auth-input{
+   @apply w-full p-3 bg-gray-800 rounded-md border border-gray-700 
+   focus:outline-none focus:border-gray-500;
+}
+
+.auth-btn{
+    @apply w-full bg-sky-400 hover:bg-gray-400 text-black 
+    font-semibold p-3 rounded-full; 
+}
+
+*::-webkit-scrollbar{
+    height: 0.5rem;
+    width: 0.1rem;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* Login Page Styles */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+    padding: 20px;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-header h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-input {
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: rgb(74, 183, 226);
+    box-shadow: 0 0 0 2px rgb(74, 183, 226);
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.login-button {
+    padding: 14px;
+    border-radius: 8px;
+    background: rgb(74, 183, 226);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid rgb(74, 183, 226);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+}
+
+.login-button:hover {
+    background: rgb(74, 183, 226);
+    transform: translateY(-1px);
+}
+
+.login-button:disabled {
+    background: #535353;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.button-loader {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.login-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-link {
+    color: rgb(74, 183, 226);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.footer-link:hover {
+    color: rgb(74, 183, 226);
+    text-decoration: underline;
+}
+
+.music-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.music-logo svg {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Card Hover Effect */
+.login-card {
+    transition: all 0.3s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: center;
+}
+
+.hover\:card-hover:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo Hover Effect */
+.hover\:logo-hover:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 8px rgb(74, 183, 226));
+}
+
+/* Input Hover Effects */
+.hover\:input-hover:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgb(74, 183, 226);
+}
+
+.hover\:input-hover:hover::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.focus\:input-focus:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color:rgb(74, 183, 226);
+    box-shadow: rgb(74, 183, 226) ;
+}
+
+/* Label Hover Effect */
+.hover\:label-hover:hover {
+    color:rgb(74, 183, 226) ;
+    text-shadow: 0 0 8px rgb(74, 183, 226);
+}
+
+/* Button Hover Effects */
+.hover\:button-hover:hover {
+    background: rgb(74, 183, 226);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgb(74, 183, 226);
+}
+
+.active\:button-active:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgb(74, 183, 226);
+}
+
+/* Link Hover Effect */
+.hover\:link-hover:hover {
+    color: bg-sky-400;
+    text-shadow: 0 0 8px rgb(74, 183, 226);
+    transform: translateX(2px);
+}
+
+
+.search-result-item {
+  transition: all 0.2s ease;
+}
+
+.search-result-item:hover {
+  background-color: #282828;
+  transform: scale(1.01);
+}
+
+
+/* Add these to index.css */
+/* Mobile Sidebar Styles */
+.mobile-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.mobile-sidebar-content {
+    width: 75%;
+    height: 100%;
+    background: #121212;
+    padding: 20px;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease-out;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger-icon {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .hamburger-icon:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active .hamburger-icon:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-icon:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 1024px) {
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .sidebar {
+        display: none;
+    }
+    
+    .main-content {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}
+
+/* Mobile Sidebar Animation */
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+/* Ensure proper z-indexing */
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.z-50 {
+  z-index: 50;
+}
+
+/* Backdrop blur effect */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
